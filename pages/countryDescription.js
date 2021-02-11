@@ -4,9 +4,14 @@ function CountryDescription({country1}){
  {
   return null
  }
- return (<div className={styles.grid}>
-       <div className={styles.card}>
-          <img className={styles.flagImg} src={country1.flag}/>
+ return (<div >
+
+       <div className={styles.descriptionCard}>
+        <div>
+         <h4>{country1.name}</h4>
+          <img className={styles.flagImg} src={country1.flag} />
+          </div>
+
           <div className={styles.flagContain}>
 
                 <p><h4 style={{display:"inline "}}>Native Name1 : </h4>{country1.nativeName}</p>
