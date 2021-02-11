@@ -25,20 +25,10 @@ const OnDataChange=(e)=>{
 
   return (<div className={styles.container}>
        <h1>Countries</h1>
-       <input type="text" onChange={OnDataChange} placeholder="enter Country name"/>
+       <input type="text" style={{width:"350px"}} onChange={OnDataChange} placeholder="enter Country name"/>
     <ShowCountries country={filterContries}/>
 
-<style jsx>{`
-   {
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 20px;
-}
-
-   }
-  `}</style>
     </div>)
 }
 
