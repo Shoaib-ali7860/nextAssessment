@@ -4,27 +4,30 @@ function Card({countryCard}){
 
 	return (<div className={styles.card}>
              
-               <img src={countryCard.flag} width="200px" />
-              <p >country:{countryCard.name}</p>
+               <img src={countryCard.flag} width="100%" height="100%"/>
+        <div className={styles.showCountryCard}>      <h5 >{countryCard.name}</h5>
            <p >Currency :{countryCard.currencies[0].name}</p>
-                 
-           <Link href={`./googleMap?lat=${countryCard.latlng[0]}&lo=${countryCard.latlng[1]}`}><button className={styles.a}>Map</button></Link>
-           <Link href={`./countries?title=${countryCard.alpha3Code}`}><button className={styles.a1}>{countryCard.name}</button></Link>
+           <div className={styles.showCountryCardButton}>      
+           <Link href={`./googleMap?lat=${countryCard.latlng[0]}&lo=${countryCard.latlng[1]}`}><button >Show Map</button></Link>
+           <Link href={`./countries?title=${countryCard.alpha3Code}`}><button >Details</button></Link>
 
+            </div>
+</div>
 		</div>)
 }
 
  const ShowCountries=({country})=>{
-if(!country)
- {
-  return null
- }
+  if(!country){
+    return null
+   }
 
-	return (<div className={styles.grid}>
+	return (<div >
 
 
 
 {
+
+
        country.map(countr=>(<Card countryCard={countr}/>))
   }
 
