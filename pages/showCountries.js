@@ -15,6 +15,10 @@ function Card({countryCard}){
 }
 
  const ShowCountries=({country})=>{
+if(!country)
+ {
+  return null
+ }
 
 	return (<div className={styles.grid}>
 
