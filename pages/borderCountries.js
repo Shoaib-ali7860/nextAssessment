@@ -17,7 +17,10 @@ function BorderImageCard({border})
 
 
 function BorderCountries({borders}){
-
+if(!borders)
+ {
+  return null
+ }
 return (
 	<div>
      <h3>borders</h3>
