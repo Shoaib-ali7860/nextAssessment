@@ -4,9 +4,9 @@ import styles from '../styles/Home.module.css'
 function BorderImageCard({border})
 {
    return (
-       <div className={styles.card}>
-        <img src={border.country1.flag} width="200px" height="120px"/>
-        <p>{border.country1.name}</p>
+       <div >
+        <img src={border.country1.flag} width="200px" height="120px" style={{margin:"10px"}}/>
+        
          
        </div>
         
@@ -17,13 +17,14 @@ function BorderImageCard({border})
 
 
 function BorderCountries({borders}){
-if(!borders)
- {
+
+if(!borders){
   return null
- }
+}
+
 return (
-	<div>
-     <h3>borders</h3>
+	<div className={styles.borderContainer}>
+     <h3>Neighbour Countries</h3>
    <div className={styles.grid}>
 
        {
