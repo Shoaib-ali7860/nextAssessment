@@ -1,6 +1,9 @@
 import styles from '../styles/Home.module.css'
 function CountryDescription({country1}){
- 
+ if(!country1)
+ {
+  return null
+ }
  return (<div className={styles.grid}>
        <div className={styles.card}>
           <img className={styles.flagImg} src={country1.flag}/>
