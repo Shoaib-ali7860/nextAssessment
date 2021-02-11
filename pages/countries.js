@@ -29,7 +29,7 @@ useEffect(()=>{
   
 
 
-	return <div className={styles.container}><h2 >Country Name : {country1.name}</h2>  
+	return <div className={styles.container}>
 <CountryDescription country1={country1}/>
 <BorderCountries borders={borders}/>
 	</div>
