@@ -127,7 +127,7 @@ display:inline;
 
 .showCountryCard{
   margin-left:5px;
-  margin-right: 5px;
+  margin-right: 6px;
   display: grid;
   grid-template-rows: auto 30px 30px;
   grid-template-columns: auto;
